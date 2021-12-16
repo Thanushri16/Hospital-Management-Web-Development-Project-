@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>eHospital</title>
+	<link rel = "icon" href =  "images/ehosp.png" type = "image/x-icon"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  	<meta name="description" content="">
+  	<meta name="author" content="">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  	<link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  	<style type="text/css">
+  		.padd
+		{
+			padding-bottom: 2%;
+		}
+
+		input[type=date]::-webkit-inner-spin-button {
+    		-webkit-appearance: none;
+    		display: none;
+		}
+		label
+		{
+			padding-left: 2%;
+			padding-right: 5%;
+		}
+		button
+  		{
+  			background-color: #2E304A;
+  			color: white;
+  			padding-top: 0.5%;
+  			padding-bottom: 0.5%;
+  			padding-left: 5%;
+  			padding-right: 5%;
+  			text-align: center;
+  			
+  		}
+        button:focus
+  		{
+  			border: 1px solid blue;
+  		}
+  	</style>
+  </head>
+  <body>
+  	<nav aria-label="breadcrumb">
+  	<ol class="breadcrumb justify-content-end">
+    <li class="breadcrumb-item"><a href="doctorhome.html">Doctor</a></li>
+    <li class="breadcrumb-item active" aria-current="page">My Patients</li>
+  	</ol>
+	</nav>
+	<form action="mypatients.php" method="post">
+	<div class="continue" style="background-color: white; margin-top: 6.45%; margin-left: 15%; margin-right: 15%;">
+	<h1 style="padding-bottom: 10px;">MY PATIENTS</h1>
+	<div class="padd">
+	<label>Patient's first name</label>
+	<input type="text" name="fname" pattern="[A-Za-z]{1-30}" required>
+	</div>
+	<div class="padd">
+	<label>Patient's last name</label>
+	<input type="text" name="lname" pattern="[A-Za-z]{1-30}" required>
+	</div>
+	<div class="padd" style="margin-top: 10px;">
+	<button type="submit">Get details</button>
+	</div>
+</div>
+</form>
+</body>
+</html>

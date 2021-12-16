@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>eHospital</title>
+  <link rel = "icon" href ="images/ehosp.png" type = "image/x-icon"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style type="text/css">
+    
+  .navbar{
+    color: #0A1172;
+  }
+  
+  .navbar a:hover{
+    background-color: navy;
+    color: white;
+  }
+	
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.side {
+  flex: 20%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+#ul1 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+}
+
+#ul1 li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+#ul1 li a:hover {
+  background-color: #555;
+  color: white;
+  text-decoration: none;
+}
+.main {
+  flex: 80%;
+  background-color: white;
+  padding-right: 20px;
+}
+
+</style>
+
+<script>
+$(document).ready(function() {
+  $("#ul1 li a").click(function(e) {
+    e.preventDefault();
+    $(".main").load($(this).attr('href'));
+  });
+});
+</script>
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm navbar navbar-light" style="background-color: #E1F5FE;">
+    <div class="navbar-brand"><img src="images/ehosp.png" width="50" height="50">eHospital Management System</div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"><i class="fas fa-bars hamburger"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar ml-auto" type="none">
+          <li class="nav-item"><a class="nav-link" href="plogout.php">Logout<span class="sr-only">(current)</span></a>
+          </li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="row">
+  <div class="side">
+  	<h2>Menu</h2>
+    <ul id="ul1">
+      <li><a href="bapp.php">Book Appointment</a></li>
+      <li><a href="apphistory.php">Appointment History</a></li>
+      <li><a href="patientmypro.php">My Profile</a></li>
+    </ul>  
+  </div>
+  
+
+  <div class="main">
+    <h2 style="text-align: center; color: #2E304A; margin-bottom: 2%;">We specialize in </h2>
+    <div class="fakeimg" style="height:200px;">
+      <a href="#"><img style="margin-left: 6%; " src="gp.jpg" width="25%" height="100%"></a>
+      <a href="#"><img style="margin-left: 6%; " src="dentist.jpg" width="25%" height="100%"></a>
+      <a href="#"><img style="margin-left: 6%; " src="gyne.jpg" width="25%" height="100%"></a> 
+    </div>
+    <h6 style="margin-top: 1%;">
+    <span style="margin-left: 12%; color: #800020;">
+      Physical Examination
+    </span>
+    <span style="margin-left: 20%; color: #800020;">
+      Dentistry
+    </span>
+    <span style="margin-left: 24%; color: #800020;">
+      Gynecology
+    </span>
+    </h6>
+    <div class="fakeimg" style="height:200px; margin-top: 4%;">
+      <a href="#"><img style="margin-left: 16%; " src="ent.jpg" width="25%" height="100%"></a>
+      <a href="#"><img style="margin-left: 16%; " src="derma.jpg" width="25%" height="100%"></a>
+    </div>
+    <h6 style="margin-top: 1%;">
+    <span style="margin-left: 23%; color: #800020;">
+      Otolaryngology
+    </span>
+    <span style="margin-left: 31%; color: #800020;">
+      Dermatology
+    </span>
+    </h6>
+  </div>
+</div>
+</body>
+</html>
+<!--
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"  id="bootstrap-css">
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+     <div style="margin-bottom: 2%;">
+    <div class="section-box-one">
+      <figure>
+        <h3>Physical Examination</h3>
+        <p>A physical examination, medical examination, or clinical examination is the process by which a medical practitioner examines the body of a patient for any possible signs or symptoms of a medical condition. </p>
+        <a href="#" class="btn btn-read">Read More</a>
+      </figure>
+      <img src="gp.jpg" width="25%">
+    </div>
+  </div>
+   <div style="margin-bottom: 2%;">
+    <div class="section-box-two">
+      <figure>
+          <h3>Dentistry</h3>
+          <p>Dentistry, also known as Dental and Oral Medicine, is a branch of medicine that consists of the study, diagnosis, prevention, and treatment of diseases, disorders, and conditions of the oral cavity and related tissues, particularly in the jaw and facial area.</p>
+          <a href="#" class="btn btn-read">Read More</a>
+      </figure>
+      <img src="dentist.jpg" width="25%" height="100%">
+    </div>
+    </div>
+     <div style="margin-bottom: 2%;">
+    <div class="section-box-three"> 
+      <figure>
+        <h3>Gynecology</h3>
+        <p>
+          Gynaecology or gynecology is the medical practice dealing with the health of the female reproductive systems and outside medicine, the term means "the science of women". 
+        </p>
+        <a href="#" class="btn btn-read">Read More</a>
+      </figure>
+      <img src="gyne.jpg" width="25%" height="100%">
+    </div>
+</div>
+<div>
+  
+</div>
+ <div>
+    <div class="section-box-four">
+      <figure>
+        <h3>Otolaryngology</h3>
+        <p>Otolaryngology is a surgical subspecialty within medicine that deals with conditions of the ear, nose, and throat (ENT) and related structures of the head and neck. </p>
+        <a href="#" class="btn btn-read">Read More</a>
+      </figure>
+      <img src="ent.jpg"  width="25%" height="100%">
+    </div>
+</div>
+ <div>
+    <div class="section-box-five">
+      <figure>
+        <h3>Dermatology</h3>
+        <p>Dermatology is the branch of medicine dealing with the skin, nails, hair ( functions and structures ) and its diseases. It is a specialty with both medical and surgical aspects.</p>
+        <a href="#" class="btn btn-read">Read More</a>
+      </figure>
+      <img src="derma.jpg"  width="25%" height="100%">
+    </div> 
+    </div>   
+-->
+<!--
+.btn-read {
+        background: transparent;
+        border-radius: 0;
+        border: 1px solid #ffffff;
+        color: #fff;
+    }
+.section-box-one{
+        height: 250px;
+        background: radial-gradient(#6e6e6e,#2f2f2f);
+        background: -webkit-radial-gradient(#6e6e6e,#2f2f2f);
+        background: -moz-radial-gradient(#6e6e6e,#2f2f2f);
+        color: #fff;
+        position: relative;
+        overflow:hidden;
+    }
+.section-box-one figure {
+        position: absolute;
+        text-align: center;
+        padding: 19px;
+        width: 100%;
+        height: 100%;
+    }
+    .section-box-one img{
+      width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: ease-in-out .5s;
+        -webkit-transition: ease-in-out .5s;
+        -moz-transition: ease-in-out .5s;
+    }
+    .section-box-one:hover img{
+        transform: translate(100%, -100%);
+        -webkit-transform: translate(100%, -100%);
+        -moz-transform: translate(100%, -100%);
+    }
+    .section-box-two{
+        height: 250px;
+        background: radial-gradient(#6e6e6e,#2f2f2f);
+        background: -webkit-radial-gradient(#6e6e6e,#2f2f2f);
+        background: -moz-radial-gradient(#6e6e6e,#2f2f2f);
+        color: #fff;
+        position: relative;
+        overflow:hidden;
+    }
+    .section-box-two figure {
+        position: absolute;
+        text-align: center;
+        padding: 19px;
+        width: 100%;
+        height: 100%;
+    }
+    .section-box-two img{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        transition: ease-in-out .5s;
+        -webkit-transition: ease-in-out .5s;
+        -moz-transition: ease-in-out .5s;
+    }
+    .section-box-two:hover img{
+        transform: translate(-100%, -100%);
+        -webkit-transform: translate(-100%, -100%);
+        -moz-transform: translate(-100%, -100%);
+    }
+    .section-box-three{
+        height: 250px;
+        background: radial-gradient(#6e6e6e,#2f2f2f);
+        background: -webkit-radial-gradient(#6e6e6e,#2f2f2f);
+        background: -moz-radial-gradient(#6e6e6e,#2f2f2f);
+        color: #fff;
+        position: relative;
+        overflow:hidden;
+    }
+    .section-box-three figure {
+        position: absolute;
+        text-align: center;
+        padding: 19px;
+        width: 100%;
+        height: 100%;
+    }
+    .section-box-three img{
+      width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: ease-in-out .5s;
+        -webkit-transition: ease-in-out .5s;
+        -moz-transition: ease-in-out .5s;
+    }
+    .section-box-three:hover img{
+        transform: translate(-100%, 100%);
+        -webkit-transform: translate(-100%, 100%);
+        -moz-transform: translate(-100%, 100%);
+    }
+    .section-box-four{
+        height: 250px;
+        background: radial-gradient(#6e6e6e,#2f2f2f);
+        background: -webkit-radial-gradient(#6e6e6e,#2f2f2f);
+        background: -moz-radial-gradient(#6e6e6e,#2f2f2f);
+        color: #fff;
+        position: relative;
+        overflow:hidden;
+    }
+    .section-box-four figure {
+        position: absolute;
+        text-align: center;
+        padding: 19px;
+        width: 100%;
+        height: 100%;
+    }
+    .section-box-four img{
+      width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: ease-in-out .5s;
+        -webkit-transition: ease-in-out .5s;
+        -moz-transition: ease-in-out .5s;
+    }
+    .section-box-four:hover img{
+        transform: translate(-100%,0);
+        -webkit-transform: translate(-100%,0);
+        -moz-transform: translate(-100%,0);
+    }
+    .section-box-five{
+        height: 250px;
+        background: radial-gradient(#6e6e6e,#2f2f2f);
+        background: -webkit-radial-gradient(#6e6e6e,#2f2f2f);
+        background: -moz-radial-gradient(#6e6e6e,#2f2f2f);
+        color: #fff;
+        position: relative;
+        overflow:hidden;
+    }
+    .section-box-five figure {
+        position: absolute;
+        text-align: center;
+        padding: 19px;
+        
+    }
+    .section-box-five img{
+      
+        position: absolute;
+        transition: ease-in-out .5s;
+        -webkit-transition: ease-in-out .5s;
+        -moz-transition: ease-in-out .5s;
+    }
+    .section-box-five:hover img{
+        transform: translate(100%,0);
+        -webkit-transform: translate(100%,0);
+        -moz-transform: translate(100%,0);
+    }
+    -->

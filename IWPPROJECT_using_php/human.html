@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>eHospital</title>
+  <link rel = "icon" href ="ehosp.png" type = "image/x-icon"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style type="text/css">
+  .split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #111;
+}
+
+/* Control the right side */
+.right {
+  right: -20px;
+}
+
+/* content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+    .navbar
+    {
+      color: #0A1172;
+    }
+    .navbar a:hover 
+    {
+        background-color: navy;
+        color: white;
+    }
+  </style>
+  <script>
+      
+  function onfunction1() {
+   var slides = ["Central Auditory Processing Disorder (CAPD)","Ear, Nose & Throat (Otorhinolaryngology)","Hearing Loss Hormone Disorder (Endocrinology)","Tinnitus"];
+var str = '<h3>Conditions and diseases related to Ear</h3><hr><ul>'
+
+slides.forEach(function(slide) {
+  str += '<li>'+ slide + '</li>';
+}); 
+
+str += '</ul>';
+document.getElementById("show").innerHTML = str;
+  }
+
+  function onfunction() {
+   var slides = ["Attention Deficit Hyperactivity Disorder (ADHD)","Brain Aneurysm","Brain Tumour","Cancer (Oncology)","Computerised Tomography (CT) Scan","Dementia","Digital Subtraction Angiography (DSA)","Electromyogram (EMG)","Epilepsy","Gamma Knife Radiosurgery","Hormone Disorder (Endocrinology)","Neuro-Rehabilitation Programme","Parkinson’s Disease","PET-MRI Scan","Positron Emission Tomography (PET) Scan"]
+var str = '<h3>Conditions and diseases related to Brain</h3><hr><ul>'
+
+slides.forEach(function(slide) {
+  str += '<li>'+ slide + '</li>';
+}); 
+
+str += '</ul>';
+document.getElementById("show").innerHTML = str;
+  }
+
+function onfunction2(){
+  var slides = ["Cancer (Oncology)","Ear, Nose & Throat (Otorhinolaryngology)","Hormone Disorder (Endocrinology)","Nasopharynx (Nose) Cancer Sinusitis","Surgical-Functional Endoscopic Sinus Surgery (FESS)"];
+var str = '<h3>Conditions and diseases related to Nose</h3><hr><ul>'
+
+slides.forEach(function(slide) {
+  str += '<li>'+ slide + '</li>';
+}); 
+
+str += '</ul>';
+document.getElementById("show").innerHTML = str;
+}
+
+function onfunction4(){
+  var slides = ["Ear, Nose & Throat (Otorhinolaryngology)","General Surgery","Head and Neck Conditions","Hormone Disorder (Endocrinology)","Laryngovideostroboscopy","Larynx (Voice Box) Cancer","Thyroid Disorder","Tonsillitis","Torticollis (Wry Neck)"];
+var str = '<h3>Conditions and diseases related to Neck</h3><hr><ul>'
+
+slides.forEach(function(slide) {
+  str += '<li>'+ slide + '</li>';
+}); 
+
+str += '</ul>';
+document.getElementById("show").innerHTML = str;
+}
+
+function onfunction3(){
+  var slides = ["Cancer (Oncology)","Cataract","Corneal Transplant (Artificial and Conventional)","Eyes (Ophthalmology)","Glaucoma","Macular Degeneration","Neuro-ophthalmology Disorders","Refractive Surgery (LASIK)"];
+var str = '<h3>Conditions and diseases related to Eye</h3><hr><ul>';
+
+slides.forEach(function(slide) {
+  str += '<li>'+ slide + '</li>';
+}); 
+
+str += '</ul>';
+document.getElementById("show").innerHTML = str;
+}
+
+
+  </script>
+</head>
+<body>
+  
+  <div class="split left">
+  <div class="centered">
+<img src="body.jpg" usemap="#image-map">
+<map name="image-map">
+    <area target="" alt="brain" title="brain" href="#" coords="262,20,10" shape="circle" onmouseover="onfunction()">
+    <area target="" alt="ear" title="ear" href="" coords="292,48,10" shape="circle" onmouseover="onfunction1()">
+    <area target="" alt="nose" title="nose" href="" coords="263,46,10" shape="circle" onmouseover="onfunction2()">
+    <area target="" alt="eye" title="eye" href="" coords="252,37,10" shape="circle" onmouseover="onfunction3()">
+    <area target="" alt="neck" title="neck" href="" coords="265,89,10" shape="circle" onmouseover="onfunction4()">
+    <area target="" alt="shoulder" title="shoulder" href="" coords="319,106,10" shape="circle" onmouseover="onfunction5()">
+</map>
+  </div>
+</div>
+  <div class="split right">
+    <div id="show">
+    <ul id="ulOne">        
+    </ul>
+
+  </div>
+  <div>
+    <a href="home.html"><button>Home</button></a>
+  </div>
+</div>
+</body>
+</html>
